@@ -14,6 +14,10 @@ function zeros(a, b, c)
 			return x1, x2
 		end
 	else
-		return -c/b
+		if b !=0
+			return -c/b
+		else
+			return "Não é uma função"
+		end
 	end
 end
