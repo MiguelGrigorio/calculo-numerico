@@ -7,7 +7,7 @@ function zeros(a, b, c)
 	if a != 0
 		delta = b^2 - 4*a*c
 		if delta < 0
-			return "Não há raízes reais"
+			println("Não há raízes reais")	
 		else
 			x1 = (-b + sqrt(delta)) / (2*a)
 			x2 = (-b - sqrt(delta)) / (2*a)
@@ -17,7 +17,7 @@ function zeros(a, b, c)
 		if b !=0
 			return -c/b
 		else
-			return "Não é uma função"
+			println("Não é uma função")
 		end
 	end
 end
