@@ -1,5 +1,3 @@
-using .MathConstants:e
-
 function fixedpoint(a, g, error)
     x = g(a)
     while abs(x - a) > error
@@ -30,7 +28,7 @@ function newton(a, f, f_derivado, error)
 end
 
 # Exercício 3.3.1
-g(x) = e^x - 2
+g(x) = exp(x) - 2
 error = 10^(-8)
 
 r1 = fixedpoint(-1.8, g, error)
@@ -43,3 +41,8 @@ error = 10^(-5)
 
 r2 = newton(1, f, f1, error)
 println("Utilizando Newton: $(round(r2, digits = 5))")
+
+# Exercício 3.6.3
+f(x) = 2*x - exp(-x^2)
+error = 10^(-5)
+r3 = secant(1, 2, f, error)
